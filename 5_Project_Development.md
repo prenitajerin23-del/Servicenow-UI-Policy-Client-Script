@@ -15,3 +15,13 @@ This document details all UI Policies and Client Scripts configured for the Inci
 // UI Policy Condition: Impact == 1
 // Field Actions:
 // - Assigned to: Mandatory = true
+
+### 2. Auto-Set Urgency to High (UI Policy and Action)
+* **Target Table:** Incident (`incident`)
+* **Condition:** `Impact` IS `1 - High`
+* **Execution:** Sets `Urgency` to `1 - High` automatically and locks the field.
+
+```javascript
+// UI Policy Condition: Impact == 1
+// Field Actions:
+// - Urgency: Set Value = 1 - High, Read-Only = true
