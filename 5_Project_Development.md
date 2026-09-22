@@ -10,6 +10,7 @@ This document details all UI Policies and Client Scripts configured for the Inci
 * **Target Table:** Incident (`incident`)
 * **Condition:** `Impact` IS `1 - High`
 * **Execution:** Makes the `Assigned to` field mandatory on the incident form.
+  '''
 javascript
 // UI Policy Condition: Impact == 1
 // Field Actions:
