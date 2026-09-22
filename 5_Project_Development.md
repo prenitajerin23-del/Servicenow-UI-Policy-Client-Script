@@ -10,12 +10,12 @@ This document details all UI Policies and Client Scripts configured for the Inci
 * **Target Table:** Incident (`incident`)
 * **Condition:** `Impact` IS `1 - High`
 * **Execution:** Makes the `Assigned to` field mandatory on the incident form.
-  '''
-javascript
+
+```javascript
 // UI Policy Condition: Impact == 1
 // Field Actions:
-// - Assigned to: Mandatory = true
-'''
+// - Assigned to: Mandatory = true```
+
 
 ### 2. Auto-Set Urgency to High (UI Policy and Action)
 * **Target Table:** Incident (`incident`)
@@ -25,4 +25,5 @@ javascript
 ```javascript
 // UI Policy Condition: Impact == 1
 // Field Actions:
-// - Urgency: Set Value = 1 - High, Read-Only = true
+// - Urgency: Set Value = 1 - High, Read-Only = true```
+
