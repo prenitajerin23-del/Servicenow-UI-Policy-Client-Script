@@ -54,6 +54,4 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (g_user.hasRole('admin')) {
        callback(true); // Allow edit for admins
        return;
-   }
-```
-
+   } 
