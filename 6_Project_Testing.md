@@ -17,7 +17,8 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** The system blocks form submission and displays the red error message: *"Assigned To is mandatory for High impact incidents"*.
 * **Status:** Passed
 
-![Mandatory Check Test](./1_Mandatory_Check_Test.png)
+<img width="1366" height="768" alt="1_Mandatory_Check_Test" src="https://github.com/user-attachments/assets/bb0e66c4-729b-4c66-841b-c9af70fa0dfe" />
+
 
 ---
 
@@ -29,7 +30,8 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** `Urgency` automatically changes to `1 - High` and becomes read-only.
 * **Status:** Passed
 
-![Auto Urgency Test](./2_Auto_Urgency.png)
+<img width="1366" height="768" alt="2_Auto_Urgency" src="https://github.com/user-attachments/assets/6a6bf046-7901-4522-acc4-8eab2c014668" />
+
 
 ---
 
@@ -41,7 +43,8 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** The `Urgency` field becomes editable again.
 * **Status:** Passed
 
-![Reverse Condition Test](./3_Reverse_Condition.png)
+<img width="1366" height="768" alt="3_Reverse_Condition" src="https://github.com/user-attachments/assets/ab3591f3-748e-4c80-a12b-96ea06e996f9" />
+
 
 ---
 
@@ -54,4 +57,5 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** An alert popup appears stating *"State cannot be updated using list editing. Please open the Incident."* and the change is canceled.
 * **Status:** Passed
 
-![List Edit Prevention Test](./4_List_Editing.png)
+<img width="1366" height="768" alt="4_List_Editing" src="https://github.com/user-attachments/assets/a32dfddc-69ae-4fe3-b92f-3f367754aa0b" />
+
