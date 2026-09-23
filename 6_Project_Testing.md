@@ -54,4 +54,4 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** An alert popup appears stating *"State cannot be updated using list editing. Please open the Incident."* and the change is canceled.
 * **Status:** Passed
 
-![List Edit Prevention Test](./4_List_Edit_Prevention.png)
+![List Edit Prevention Test](./4_List_Editing.png)
