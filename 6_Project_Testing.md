@@ -29,7 +29,7 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** `Urgency` automatically changes to `1 - High` and becomes read-only.
 * **Status:** Passed
 
-![Auto Urgency Test](./2_Auto_Urgency_Test.png)
+![Auto Urgency Test](./2_Auto_Urgency.png)
 
 ---
 
@@ -41,7 +41,7 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** The `Urgency` field becomes editable again.
 * **Status:** Passed
 
-![Reverse Condition Test](./3_Reverse_Condition_Test.png)
+![Reverse Condition Test](./3_Reverse_Condition.png)
 
 ---
 
@@ -54,4 +54,4 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** An alert popup appears stating *"State cannot be updated using list editing. Please open the Incident."* and the change is canceled.
 * **Status:** Passed
 
-![List Edit Prevention Test](./4_List_Edit_Prevention_Test.png)
+![List Edit Prevention Test](./4_List_Edit_Prevention.png)
