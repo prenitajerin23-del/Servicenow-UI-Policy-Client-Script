@@ -17,6 +17,8 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** The system blocks form submission and displays the red error message: *"Assigned To is mandatory for High impact incidents"*.
 * **Status:** Passed
 
+![Mandatory Check Test](./1_Mandatory_Check_Test.png)
+
 ---
 
 ### Test Case 2: Auto-Set Urgency to High Validation
@@ -27,6 +29,8 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** `Urgency` automatically changes to `1 - High` and becomes read-only.
 * **Status:** Passed
 
+![Auto Urgency Test](./2_Auto_Urgency_Test.png)
+
 ---
 
 ### Test Case 3: Reverse Condition Logic (Impact Change)
@@ -36,6 +40,8 @@ This document outlines the test cases, execution steps, and verification results
   1. Change `Impact` from `1 - High` to `2 - Medium`.
 * **Expected Result:** The `Urgency` field becomes editable again.
 * **Status:** Passed
+
+![Reverse Condition Test](./3_Reverse_Condition_Test.png)
 
 ---
 
@@ -48,12 +54,4 @@ This document outlines the test cases, execution steps, and verification results
 * **Expected Result:** An alert popup appears stating *"State cannot be updated using list editing. Please open the Incident."* and the change is canceled.
 * **Status:** Passed
 
----
-
-## Evidence & Screenshots
-*(Attach or embed your testing screenshots here)*
-
-* `1_Mandatory_Check_Test.png` - Mandatory field error on High impact incident.
-* `2_Auto_Urgency_Test.png` - Auto-populated and locked Urgency field.
-* `3_Reverse_Condition_Test.png` - Unlocked Urgency field on Medium impact.
-* `4_List_Edit_Prevention_Test.png` - Alert box when attempting to edit State in list view.
+![List Edit Prevention Test](./4_List_Edit_Prevention_Test.png)
