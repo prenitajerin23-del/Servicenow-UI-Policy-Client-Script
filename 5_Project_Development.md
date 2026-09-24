@@ -17,6 +17,8 @@ This document details all UI Policies and Client Scripts configured for the Inci
 // - Assigned to: Mandatory = true
 
 ```
+<img width="1366" height="768" alt="1_Mandatory_Check_Test" src="https://github.com/user-attachments/assets/a62885ca-9222-4aed-bd40-aad77615565c" />
+
 ### 2. Auto-Set Urgency to High (UI Policy and Action)
 * **Target Table:** Incident (`incident`)
 * **Condition:** `Impact` IS `1 - High`
@@ -28,6 +30,8 @@ This document details all UI Policies and Client Scripts configured for the Inci
 // - Urgency: Set Value = 1 - High, Read-Only = true
 
 ```
+<img width="1366" height="768" alt="2_Auto_Urgency" src="https://github.com/user-attachments/assets/024f7bd4-c6b9-4ed3-97fc-c0cc142521e4" />
+
 ### 3. Reverse Condition Logic (onChange Client Script)
 * **Target Table:** Incident (`incident`)
 * **Type:** `onChange`
