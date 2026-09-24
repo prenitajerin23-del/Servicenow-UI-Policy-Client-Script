@@ -25,8 +25,10 @@
 - **Conditions:** `Impact IS 1 - High`
 - **Reverse if false:** `true`
 
-![UI Policy Setup](./Screenshot%20(8).png)
-![UI Policy Actions](./Screenshot%20(9).png)
+<img width="1366" height="768" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/ab2f3bf1-082e-4800-9db5-6bb0296f1fc7" />
+
+<img width="1366" height="768" alt="Screenshot (9)" src="https://github.com/user-attachments/assets/a54b8e43-0460-4329-ba14-5d432346f2b4" />
+
 
 ---
 
@@ -36,16 +38,19 @@
 - **Name:** Auto set urgency for high impact
 - **Type:** `onChange` | **Field Name:** `Impact`
 
-![onChange Script Setup](./Screenshot%20(7).png)
+<img width="1366" height="768" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/c841fcd2-3c75-4030-84a4-97637950774f" />
+
 
 #### B. onSubmit Client Script
 - **Name:** Prevent save if Assigned To missing
 - **Type:** `onSubmit`
 
-![onSubmit Script Setup](./Screenshot%20(6).png)
+<img width="1366" height="768" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/9d29050a-ac58-4e35-a75f-82842f21a925" />
+
 
 #### C. onCellEdit Client Script
 - **Name:** Prevent state change via list edit
 - **Type:** `onCellEdit` | **Field Name:** `State`
+  
+<img width="1366" height="768" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/b01358c3-54a2-4b7a-86c5-3700e0cd059e" />
 
-![onCellEdit Script Setup](./Screenshot%20(5).png)shots directly into this folder.
