@@ -46,6 +46,8 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 }
 
 ```
+<img width="1366" height="768" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/725bf0ab-1a5e-4637-9438-034ecaf36e4a" />
+
 ### 4. Prevent List Editing on State Field (onCellEdit Client Script)
 * **Target Table:** Incident (`incident`)
 * **Type:** `onCellEdit`
@@ -58,3 +60,6 @@ function onCellEdit(sysID, table, oldValues, newValue, callback) {
     alert("State cannot be updated using list editing. Please open the Incident.");
     callback(saveSuccess);
 }
+```
+<img width="1366" height="768" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/a849fa10-0fe4-4462-ae76-722f6220fe0c" />
+
