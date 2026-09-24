@@ -1,53 +1,40 @@
 # Phase 7: Project Documentation
 
-## System Configuration Overview
+## Setup & Configuration Guide
 
-This document provides technical documentation and configuration details for the ServiceNow client-side customizations on the Incident (`[incident]`) table.
-
----
-
-### 1. Instance Details
+### 1. ServiceNow Instance & Navigation
 - **Instance URL:** `dev425939.service-now.com`
-- **Application Scope:** Global
 - **Target Table:** Incident `[incident]`
 
 ---
 
-### 2. UI Policy Details
+### 2. UI Policy Implementation
 - **Policy Name:** `High Impact Control`
-- **Table:** Incident `[incident]`
 - **Conditions:** `Impact IS 1 - High`
-- **Reverse if false:** `true`
-- **Actions:**
-  - `assignment_group` -> Mandatory: **True**
-  - `urgency` -> Read-only: **True**
-
-![UI Policy Setup](./Screenshot%20(8).png)
-![UI Policy Actions](./Screenshot%20(9).png)
+- **Reverse if false:** `True`
+- **UI Policy Actions:**
+  1. `Assignment group` -> `Mandatory: true`
+  2. `Urgency` -> `Read-only: true`
 
 ---
 
-### 3. Client Scripts Setup Details
+### 3. Client Scripts Overview
 
-#### A. onChange Client Script
-- **Name:** Auto set urgency for high impact
-- **Type:** `onChange`
-- **Field Name:** `Impact`
-- **Logic:** Evaluates impact change and sets urgency to 1 with an info message banner.
+1. **`onChange` Client Script:**
+   - **Name:** Auto set urgency for high impact
+   - **Field name:** `impact`
+   - **Logic:** Automatically sets `urgency` to `1` and prints an informative message banner when impact is changed to `1`.
 
-![onChange Script Setup](./Screenshot%20(7).png)
+2. **`onSubmit` Client Script:**
+   - **Name:** Prevent save if Assigned To missing
+   - **Logic:** Evaluates form values prior to save. If impact is `1` and `assigned_to` is empty, displays a field error box and cancels submission (`return false`).
 
-#### B. onSubmit Client Script
-- **Name:** Prevent save if Assigned To missing
-- **Type:** `onSubmit`
-- **Logic:** Intercepts save event; checks if impact is high and assigned_to is blank, cancelling submission if true.
+3. **`onCellEdit` Client Script:**
+   - **Name:** Prevent state change via list edit
+   - **Field name:** `state`
+   - **Logic:** Triggers a browser alert informing the user that state cannot be updated via list editing and cancels the action (`callback(false)`).
 
-![onSubmit Script Setup](./Screenshot%20(6).png)
+---
 
-#### C. onCellEdit Client Script
-- **Name:** Prevent state change via list edit
-- **Type:** `onCellEdit`
-- **Field Name:** `State`
-- **Logic:** Intercepts list view cell edit attempt and triggers alert dialog blocking the change.
-
-![onCellEdit Script Setup](./Screenshot%20(5).png)
+## Configuration Screenshots
+Upload UI Policy configuration, UI Policy Actions, and Client Script setup screenshots directly into this folder.
