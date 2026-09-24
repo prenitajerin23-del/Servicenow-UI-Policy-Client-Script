@@ -1,40 +1,51 @@
 # Phase 7: Project Documentation
 
-## Setup & Configuration Guide
+## Technical Configuration Summary
 
-### 1. ServiceNow Instance & Navigation
+| Feature / Artifact | Type | Target Table | Target Field | Key Logic / Action |
+| :--- | :--- | :--- | :--- | :--- |
+| **High Impact Control** | UI Policy | `incident` | `Impact` | Triggers when `Impact = 1 - High`. Sets `urgency` to Read-only and `assignment_group` to Mandatory. |
+| **Auto set urgency** | Client Script (`onChange`) | `incident` | `Impact` | Sets `urgency` value to `1` and adds an Info Message banner on High Impact selection. |
+| **Prevent save if Assigned To missing** | Client Script (`onSubmit`) | `incident` | Form Level | Cancels submission (`return false`) and shows an error under `assigned_to` if empty on High Impact. |
+| **Prevent state change via list edit** | Client Script (`onCellEdit`) | `incident` | `State` | Cancels inline list edit (`callback(false)`) and alerts user to open the Incident record. |
+
+---
+
+## System Configuration Details
+
+### 1. Instance Details
 - **Instance URL:** `dev425939.service-now.com`
+- **Application Scope:** Global
 - **Target Table:** Incident `[incident]`
 
 ---
 
-### 2. UI Policy Implementation
+### 2. UI Policy Setup
 - **Policy Name:** `High Impact Control`
 - **Conditions:** `Impact IS 1 - High`
-- **Reverse if false:** `True`
-- **UI Policy Actions:**
-  1. `Assignment group` -> `Mandatory: true`
-  2. `Urgency` -> `Read-only: true`
+- **Reverse if false:** `true`
+
+![UI Policy Setup](./Screenshot%20(8).png)
+![UI Policy Actions](./Screenshot%20(9).png)
 
 ---
 
-### 3. Client Scripts Overview
+### 3. Client Scripts Setup
 
-1. **`onChange` Client Script:**
-   - **Name:** Auto set urgency for high impact
-   - **Field name:** `impact`
-   - **Logic:** Automatically sets `urgency` to `1` and prints an informative message banner when impact is changed to `1`.
+#### A. onChange Client Script
+- **Name:** Auto set urgency for high impact
+- **Type:** `onChange` | **Field Name:** `Impact`
 
-2. **`onSubmit` Client Script:**
-   - **Name:** Prevent save if Assigned To missing
-   - **Logic:** Evaluates form values prior to save. If impact is `1` and `assigned_to` is empty, displays a field error box and cancels submission (`return false`).
+![onChange Script Setup](./Screenshot%20(7).png)
 
-3. **`onCellEdit` Client Script:**
-   - **Name:** Prevent state change via list edit
-   - **Field name:** `state`
-   - **Logic:** Triggers a browser alert informing the user that state cannot be updated via list editing and cancels the action (`callback(false)`).
+#### B. onSubmit Client Script
+- **Name:** Prevent save if Assigned To missing
+- **Type:** `onSubmit`
 
----
+![onSubmit Script Setup](./Screenshot%20(6).png)
 
-## Configuration Screenshots
-Upload UI Policy configuration, UI Policy Actions, and Client Script setup screenshots directly into this folder.
+#### C. onCellEdit Client Script
+- **Name:** Prevent state change via list edit
+- **Type:** `onCellEdit` | **Field Name:** `State`
+
+![onCellEdit Script Setup](./Screenshot%20(5).png)shots directly into this folder.
